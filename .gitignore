@@ -1,0 +1,63 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment folders
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore model and data files
+data/
+models/
+*.h5
+*.ckpt
+*.pt
+*.pth
+*.joblib
+
+# Ignore logs and temp files
+logs/
+*.log
+*.tmp
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+# Ignore environment configuration files
+.env
+.env.local
+config.yaml
+
+# Ignore Docker-related files
+*.dockerignore
+
+# Ignore Node.js dependencies (if applicable)
+node_modules/
+yarn.lock
+package-lock.json
+
+# Ignore deployment and build files
+dist/
+build/
+
+# Ignore dataset and cache files
+*.csv
+*.tsv
+*.json
+*.db
+*.sqlite
+
+# Ignore compiled C/C++ files
+*.o
+*.out
+*.a
+*.so
+
+# Ignore temporary files created by editors
+.DS_Store
+Thumbs.db
