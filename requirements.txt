@@ -1,0 +1,5 @@
+faiss-cpu==1.10.0
+numpy
+pandas
+torch
+transformers
