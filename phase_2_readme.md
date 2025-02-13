@@ -80,6 +80,35 @@ Enter search query: A001
 
 ---
 
+## **🔍 Understanding Embeddings and FAISS**
+### **✅ Why Do We Use Embeddings?**
+- Embeddings **convert categorical data (item IDs) into numerical vectors**.
+- Similar items have **closer vector representations** in high-dimensional space.
+- This allows FAISS to **efficiently find nearest neighbors** based on similarity.
+
+### **✅ Why Did We Create a FAISS Index?**
+- Without FAISS, we'd have to **compare each query against all stored embeddings manually**, which is computationally expensive.
+- FAISS organizes embeddings into a **searchable index**, allowing **fast retrieval**.
+- **Querying FAISS returns the closest items in milliseconds**, making the search engine highly efficient.
+
+---
+
+## **🔍 Comparing FAISS with Elasticsearch**
+### **✅ Similarities Between FAISS and Elasticsearch**
+| **Feature**            | **FAISS (Embeddings-based Search)**           | **Elasticsearch (Text-based Search)**  |
+|------------------------|--------------------------------|--------------------------------|
+| **Purpose**           | Finds similar items via **vector embeddings** | Retrieves documents via **keyword matching** |
+| **Storage Format**    | **High-dimensional vector index** | **Inverted index for fast text search** |
+| **Similarity Search** | Uses **nearest neighbor search in vector space** | Uses **BM25, term frequency, fuzzy matching** |
+| **Use Cases**         | **Recommendations, NLP-based search** | **Structured queries, full-text search** |
+
+### **✅ Key Difference: FAISS vs. Elasticsearch**
+- **FAISS** is optimized for **semantic similarity search** (finding related items based on embeddings).
+- **Elasticsearch** is optimized for **text-based search** (matching documents using keywords and structured queries).
+- A **hybrid approach** combines both—where **Elasticsearch retrieves documents**, and **FAISS ranks them using embeddings**.
+
+---
+
 ## **🔍 Interpretation of Search Engine Results**
 ### **✅ FAISS is Working Correctly**
 - **FAISS index loads successfully**, confirming that embeddings were indexed properly.
